@@ -6,19 +6,19 @@ Simple image processing using opencv
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine.
-▪ Filtering :
-  ▪ median filter
-  ▪ gaussian filter
-▪ Derivation
-  ▪ calculation of the gradient in an image (Sobel)
-▪ Operations of mathematical morphology:
-  ▪ dilatation
-  ▪ erosion
-▪ Contour Detection :
-  ▪ application of a contour detector "Canny"
-▪ Segmentations of images:
-  ▪ thresholding operations
-  ▪ regional growth segmentation
+* Filtering :
+  * median filter
+  * gaussian filter
+* Derivation :
+  * calculation of the gradient in an image (Sobel)
+* Operations of mathematical morphology :
+  * dilatation
+  * erosion
+* Contour Detection :
+  * application of a contour detector "Canny"
+* Segmentations of images:
+  * thresholding operations
+  * regional growth segmentation
 ### Prerequisites
 
 You will need [Visual Studio](https://visualstudio.microsoft.com/fr/) (Pro or community) at least 2015 and [opencv](https://opencv.org/releases/)
