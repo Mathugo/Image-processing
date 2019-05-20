@@ -3,8 +3,6 @@ Simple image processing using opencv
 
 ## Goals
 
-## Getting Started
-
 These instructions will get you a copy of the project up and running on your local machine.
 * Filtering :
   * median filter
@@ -19,17 +17,22 @@ These instructions will get you a copy of the project up and running on your loc
 * Segmentations of images:
   * thresholding operations
   * regional growth segmentation
+  
+## Getting Started
+
 ### Prerequisites
 
 You will need [Visual Studio](https://visualstudio.microsoft.com/fr/) (Pro or community) at least 2015 and [opencv](https://opencv.org/releases/)
 
 ### Installing 
+
 #### Windows 
 
 Extract opencv
 Modify the Windows environnement variables --> system variable --> Path ---> add the path of your opencv folder
 
 #### Visual Studio
+
 Put your project in Debug mode and x64
 
 You have to add external library (opencv) and then link it : 
