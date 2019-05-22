@@ -125,7 +125,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="animations.cpp" />
+    <ClCompile Include="application.cpp" />
+    <ClCompile Include="controller.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="observer.cpp" />
+    <ClCompile Include="subject.cpp" />
+    <ClCompile Include="viewMenu.cpp" />
+    <ClCompile Include="viewTitle.cpp" />
+    <ClCompile Include="viewWelcome.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="animations.h" />
+    <ClInclude Include="application.h" />
+    <ClInclude Include="controller.h" />
+    <ClInclude Include="observer.h" />
+    <ClInclude Include="subject.h" />
+    <ClInclude Include="viewMenu.h" />
+    <ClInclude Include="viewTitle.h" />
+    <ClInclude Include="viewWelcome.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

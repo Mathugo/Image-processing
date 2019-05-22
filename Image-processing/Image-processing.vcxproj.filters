@@ -18,5 +18,55 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="viewMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="controller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="observer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="viewTitle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="animations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="viewWelcome.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="viewMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="controller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="observer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="subject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="viewTitle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="animations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="viewWelcome.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
