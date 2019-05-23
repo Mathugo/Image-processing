@@ -18,7 +18,7 @@ void ViewMenu::notify()
 {
 	if (controller.getScreen() == 0)
 		display();
-	else if (controller.getScreen() == 5)
+	else if (controller.getScreen() == 7)
 		displayIMG();
 }
 
@@ -34,7 +34,9 @@ void ViewMenu::display() const
 	printY("\t2 - Operations of mathematical morphology");
 	printY("\t3 - Contour Detection");
 	printY("\t4 - Segmentations of images");
-	printBB("\t5 - Display your image");
+	printBB("\t5 - Restore your image");
+	printBB("\t6 - Save current image");
+	printBB("\t7 - Display your image");
 	printRB("\t9 - Exit");
 	std::cout << std::endl;
 
