@@ -19,6 +19,6 @@ public:
 	/**
 	 * Displays the view
 	 */
-	virtual void display();
+	virtual void display() const;
 
 };

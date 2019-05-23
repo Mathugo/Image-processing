@@ -1,8 +1,11 @@
 #include "controller.h"
 
 
-
-Controller::Controller() : Subject(), currentScreen(0)
+/**
+* Constructor
+* currentScreen set to -1 to display viewWelcome
+*/
+Controller::Controller() : Subject(), currentScreen(-1)
 {
 
 }
@@ -13,7 +16,7 @@ Controller::Controller() : Subject(), currentScreen(0)
  */
 void Controller::setScreen(const int& idView)
 {
-	if (idView >= 0 && idView <= 9)
+	if (idView >= -1 && idView <= 9)
 		currentScreen = idView;
 	notify();
 }
@@ -28,11 +31,19 @@ void Controller::readIMG(const std::string filename)
 Création de l’objet image et lecture de l’image à partir du
 répertoire associé en utilisant la méthode imread()
 */
-	std::cv::Mat image = imread(filename);
+	cv::Mat image = cv::imread(filename);
 	// Vérifier si l’image existe bien dans le répertoire
 	if (image.empty())
 	{
-		return -1;
+		printRB("Unable to load " + filename+ " please retry");
+		Sleep(1000);
+		setScreen(-1);
+	}
+	else
+	{
+		printG("Successfully loaded " + filename);
+		Sleep(1000);
+		setScreen(0);
 	}
 	// Affichage de l’image dans une fenêtre (Image)
 }

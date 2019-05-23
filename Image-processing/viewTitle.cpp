@@ -24,5 +24,6 @@ void ViewTitle::clear() const
  */
 void ViewTitle::display() const
 {
-	printG("[ "+title+" ]");
+	printY("[ "+title+" ]");
+	std::cout << std::endl << std::endl;
 }

@@ -1,6 +1,7 @@
 #pragma once
 #include "subject.h"
 #include <opencv2/opencv.hpp>
+#include "animations.h"
 
 class Controller : public Subject
 {

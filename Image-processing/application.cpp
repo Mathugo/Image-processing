@@ -2,11 +2,11 @@
 
 
 
-Application::Application() : controller(), viewMenu(controller)
+Application::Application() : controller(), viewWelcome(controller), viewMenu(controller)
 {
 }
 
 void Application::run()
 {
-	//controller.notify();
+	controller.notify();
 }
