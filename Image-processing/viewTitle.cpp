@@ -27,3 +27,11 @@ void ViewTitle::display() const
 	printY("[ "+title+" ]");
 	std::cout << std::endl << std::endl;
 }
+
+/**
+* Return the title to check diferent views
+*/
+std::string ViewTitle::getTitle() const
+{
+	return title;
+}

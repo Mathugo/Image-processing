@@ -55,6 +55,7 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
+    <Import Project="..\metier\metier.vcxitems" Label="Shared" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -131,6 +132,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="observer.cpp" />
     <ClCompile Include="subject.cpp" />
+    <ClCompile Include="viewFilters.cpp" />
     <ClCompile Include="viewMenu.cpp" />
     <ClCompile Include="viewTitle.cpp" />
     <ClCompile Include="viewWelcome.cpp" />
@@ -141,6 +143,7 @@
     <ClInclude Include="controller.h" />
     <ClInclude Include="observer.h" />
     <ClInclude Include="subject.h" />
+    <ClInclude Include="viewFilters.h" />
     <ClInclude Include="viewMenu.h" />
     <ClInclude Include="viewTitle.h" />
     <ClInclude Include="viewWelcome.h" />

@@ -45,6 +45,9 @@
     <ClCompile Include="viewWelcome.cpp">
       <Filter>Views</Filter>
     </ClCompile>
+    <ClCompile Include="viewFilters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="controller.h">
@@ -70,6 +73,9 @@
     </ClInclude>
     <ClInclude Include="viewMenu.h">
       <Filter>Views</Filter>
+    </ClInclude>
+    <ClInclude Include="viewFilters.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

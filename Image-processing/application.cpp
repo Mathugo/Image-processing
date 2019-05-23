@@ -2,7 +2,7 @@
 
 
 
-Application::Application() : controller(), viewWelcome(controller), viewMenu(controller)
+Application::Application() : controller(), viewWelcome(controller), viewMenu(controller), viewFilters(controller)
 {
 }
 

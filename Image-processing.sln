@@ -5,7 +5,13 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Image-processing", "Image-processing\Image-processing.vcxproj", "{94034BCB-0891-4C2F-8F26-D839C45AEF67}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "metier", "metier\metier.vcxitems", "{E3B15E2B-797C-49C3-960B-07CC826EA76E}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		metier\metier.vcxitems*{94034bcb-0891-4c2f-8f26-d839c45aef67}*SharedItemsImports = 4
+		metier\metier.vcxitems*{e3b15e2b-797c-49c3-960b-07cc826ea76e}*SharedItemsImports = 9
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86

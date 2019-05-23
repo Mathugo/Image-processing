@@ -5,14 +5,13 @@
 * Constructor
 * currentScreen set to -1 to display viewWelcome
 */
-Controller::Controller() : Subject(), currentScreen(-1)
+Controller::Controller() : Subject(), currentScreen(-1), currentview(menu)
 {
-
 }
 
 /**
  * Defines the current screen to display
- * @param value : id of the screen to display
+ * @param idView : id of the screen to display
  */
 void Controller::setScreen(const int& idView)
 {
@@ -25,6 +24,23 @@ int Controller::getScreen() const
 	return currentScreen;
 }
 
+/**
+ * Defines the current view to display
+ * @param _currentview: type of view to display
+ */
+void Controller::setCurrentView(views _currentview)
+{
+	currentview = _currentview;
+}
+
+views Controller::getCurrentView() const
+{
+	return currentview;
+}
+/**
+* Read IMG from the user
+* @param filename: name of the file to read
+*/
 void Controller::readIMG(const std::string filename)
 {
 	/*
@@ -32,7 +48,7 @@ Création de l’objet image et lecture de l’image à partir du
 répertoire associé en utilisant la méthode imread()
 */
 	image = cv::imread(filename);
-	current_image = image;
+	currentImage = image;
 	// Vérifier si l’image existe bien dans le répertoire
 	if (image.empty())
 	{
@@ -48,6 +64,7 @@ répertoire associé en utilisant la méthode imread()
 	}
 	// Affichage de l’image dans une fenêtre (Image)
 }
+
 /**
  * Print current image
  * @param windowName: Name of the windows 
@@ -55,19 +72,48 @@ répertoire associé en utilisant la méthode imread()
 void Controller::printIMG(const std::string windowName) const
 {
 	cv::namedWindow(windowName,cv::WINDOW_NORMAL);      
-	imshow(windowName, current_image);      
+	imshow(windowName, currentImage);      
 	cv::waitKey(0);      
 	cv::destroyWindow(windowName);
 }
 
+/**
+* Save the current image
+*/
+void Controller::saveIMG() const
+{
+	std::string filename;
+	printY("Please enter a name for your image : ");
+	std::cin >> filename;
+	imwrite(filename, currentImage);
+}
+
+/**
+* Restore your current image at its original format
+*/
+void Controller::restoreIMG()
+{
+	currentImage = image;
+}
+/**
+* Start MedianFilter on currentImage
+*/
 void Controller::MedianFilter()
 {
-	cv::Mat dst;
-	int MAX_KERNEL_LENGTH = 30; // Number of pixels around to median 
-
-	for (int i = 1; i < MAX_KERNEL_LENGTH; i = i + 2)
-	{
-		medianBlur(image, dst, i);
-	}
+	Filters filter;
+	printY("Please wait while the median filter is being applied on your image");
+	printY("This might take a while depending on the size of your image");
+	currentImage = filter.MedianFilter(currentImage);
 	printIMG("Your image with the median filter");
+}
+/**
+* Start GaussianFilter on currentImage
+*/
+void Controller::GaussianFilter()
+{
+	Filters filter;
+	printY("Please wait while the gaussian filter is being applied on your image");
+	printY("This might take a while depending on the size of your image");
+	currentImage = filter.GaussianFilter(currentImage);
+	printIMG("Your image with the gaussian filter");
 }

@@ -1,15 +1,15 @@
 #pragma once
-#include "controller.h"
-#include <iostream>
 #include "viewTitle.h"
+#include "controller.h"
+#include "animations.h"
 
-class ViewMenu : public ViewTitle
+class ViewFilters : public ViewTitle
 {
 private:
 	// Controller of the application
 	Controller& controller;
 public:
-	ViewMenu(Controller& controller);
+	ViewFilters(Controller& _controller);
 
 	/**
 		 * Notification function of the view
@@ -22,3 +22,4 @@ public:
 	virtual void display() const;
 
 };
+

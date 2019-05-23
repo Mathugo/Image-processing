@@ -27,5 +27,12 @@ public:
 	 * Displays generic dialog
 	 */
 	virtual void display() const;
+
+	/**
+	* Return the title to check diferent views
+	*/
+	std::string getTitle() const;
+	
+
 };
 
