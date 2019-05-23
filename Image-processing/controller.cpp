@@ -101,8 +101,6 @@ void Controller::restoreIMG()
 void Controller::MedianFilter()
 {
 	Filters filter;
-	printY("Please wait while the median filter is being applied on your image");
-	printY("This might take a while depending on the size of your image");
 	currentImage = filter.MedianFilter(currentImage);
 	printIMG("Your image with the median filter");
 }
@@ -112,8 +110,13 @@ void Controller::MedianFilter()
 void Controller::GaussianFilter()
 {
 	Filters filter;
-	printY("Please wait while the gaussian filter is being applied on your image");
-	printY("This might take a while depending on the size of your image");
 	currentImage = filter.GaussianFilter(currentImage);
 	printIMG("Your image with the gaussian filter");
+}
+
+void Controller::Grad()
+{
+	Derivative derivate;
+	derivate.grad(currentImage);
+	printIMG("Your image with gradients");
 }

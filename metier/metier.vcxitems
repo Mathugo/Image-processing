@@ -14,9 +14,11 @@
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)derivative.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)filters.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)derivative.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)filters.cpp" />
   </ItemGroup>
 </Project>

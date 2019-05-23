@@ -9,6 +9,7 @@
 
 #include "animations.h"
 #include "filters.h"
+#include "derivative.h"
 
 typedef enum views views;
 enum views
@@ -79,6 +80,8 @@ public:
 	* GaussianFilter using current image
 	*/
 	void GaussianFilter();
+
+	void Grad();
 
 };
 
