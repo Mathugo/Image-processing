@@ -1,24 +1,25 @@
 # Image-processing
-Simple image processing using opencv
+Simple image processing using opencv 
 
 ## Goals
-
-These instructions will get you a copy of the project up and running on your local machine.
-* Filtering :
-  * median filter
-  * gaussian filter
-* Derivation :
-  * calculation of the gradient in an image (Sobel)
-* Operations of mathematical morphology :
-  * dilatation
-  * erosion
-* Contour Detection :
-  * application of a contour detector "Canny"
-* Segmentations of images:
-  * thresholding operations
-  * regional growth segmentation
+This project is made with the MVC design pattern, finally they will be different options : 
+ * Filtering :
+   * median filter
+   * gaussian filter
+ * Derivation :
+   * calculation of the gradient in an image (Sobel)
+ * Operations of mathematical morphology :
+   * dilatation
+   * erosion
+ * Contour Detection :
+   * application of a contour detector "Canny"
+ * Segmentations of images:
+   * thresholding operations
+   * regional growth segmentation
   
 ## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine.
 
 ### Prerequisites
 
