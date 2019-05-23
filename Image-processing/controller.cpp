@@ -31,7 +31,7 @@ void Controller::readIMG(const std::string filename)
 Création de l’objet image et lecture de l’image à partir du
 répertoire associé en utilisant la méthode imread()
 */
-	cv::Mat image = cv::imread(filename);
+	image = cv::imread(filename);
 	// Vérifier si l’image existe bien dans le répertoire
 	if (image.empty())
 	{
@@ -46,4 +46,12 @@ répertoire associé en utilisant la méthode imread()
 		setScreen(0);
 	}
 	// Affichage de l’image dans une fenêtre (Image)
+}
+
+void Controller::printIMG(const std::string windowName) const
+{
+	cv::namedWindow(windowName);      
+	imshow(windowName, image);      
+	cv::waitKey(0);      
+	cv::destroyWindow(windowName);
 }

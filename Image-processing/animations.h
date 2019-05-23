@@ -17,6 +17,7 @@
 void printY(const std::string buffer);
 void printRB(const std::string buffer);
 void printB(const std::string buffer);
+void printBB(const std::string buffer);
 void printG(const std::string buffer);
 
 

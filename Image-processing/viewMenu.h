@@ -21,4 +21,10 @@ public:
 	 */
 	virtual void display() const;
 
+	/**
+	 * Displays the IMG
+	 */
+	void displayIMG() const;
+
+
 };

@@ -27,7 +27,6 @@ void printY(const std::string buffer)
 {
 	std::cout << KYEL << buffer << RST << std::endl;
 }
-
 void printRB(const std::string buffer)
 {
 	std::cout << KBOLD << KRED << buffer << RST << std::endl;
@@ -39,4 +38,9 @@ void printG(const std::string buffer)
 void printB(const std::string buffer)
 {
 	std::cout << KBLU << buffer << RST << std::endl;
+}
+void printBB(const std::string buffer)
+{
+	std::cout << KBOLD << KBLU << buffer << RST << std::endl;
+
 }

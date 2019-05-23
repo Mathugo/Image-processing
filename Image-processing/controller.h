@@ -7,6 +7,7 @@ class Controller : public Subject
 {
 private:
 	int currentScreen;
+	cv::Mat image;
 public:
 	/**
  * Constructor
@@ -28,5 +29,9 @@ public:
 	*/
 	void readIMG(const std::string filename);
 
+	/**
+		* Print IMG from the user
+	*/
+	void printIMG(const std::string windowName) const;
 };
 

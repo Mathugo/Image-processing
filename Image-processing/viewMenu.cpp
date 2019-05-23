@@ -18,6 +18,8 @@ void ViewMenu::notify()
 {
 	if (controller.getScreen() == 0)
 		display();
+	else if (controller.getScreen() == 5)
+		displayIMG();
 }
 
 /**
@@ -32,6 +34,7 @@ void ViewMenu::display() const
 	printY("\t2 - Operations of mathematical morphology");
 	printY("\t3 - Contour Detection");
 	printY("\t4 - Segmentations of images");
+	printBB("\t5 - Display your image");
 	printRB("\t9 - Exit");
 	std::cout << std::endl;
 
@@ -39,4 +42,10 @@ void ViewMenu::display() const
 	std::cin.clear();
 	std::cin >> res;
 	controller.setScreen(res);
+}
+
+void ViewMenu::displayIMG() const
+{
+	controller.printIMG("Your image");
+	controller.setScreen(0);
 }
