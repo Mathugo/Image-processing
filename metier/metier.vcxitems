@@ -16,9 +16,11 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)derivative.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)filters.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)morphology.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)derivative.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)filters.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)morphology.cpp" />
   </ItemGroup>
 </Project>

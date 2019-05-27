@@ -43,7 +43,7 @@ void ViewFilters::display() const
 	ViewTitle::display();
 	printY("\t1 - Median Filter");
 	printY("\t2 - Gaussian Filter");
-	printY("\t3 - Return to menu");
+	printBB("\t3 - Return to menu");
 
 	controller.setCurrentView(filters);
 	std::cout << std::endl;

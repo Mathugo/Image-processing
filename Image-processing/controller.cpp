@@ -122,3 +122,14 @@ void Controller::Grad()
 	derivate.grad(currentImage);
 	printIMG("Your image with gradients");
 }
+
+void Controller::Erosion()
+{
+	Morphology morphology;
+
+}
+
+void Controller::Dilatation()
+{
+	Morphology morphology;
+}

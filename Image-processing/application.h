@@ -4,6 +4,7 @@
 #include "viewWelcome.h"
 #include "viewFilters.h"
 #include "viewDerivative.h"
+#include "viewMorphology.h"
 
 class Application  
 {
@@ -13,7 +14,8 @@ private:
 	ViewWelcome viewWelcome;
 	ViewFilters viewFilters;
 	ViewDerivative viewDerivation;
-	
+	ViewMorphology viewMorphology;
+
 public:
 	/**
 	 * Constructor

@@ -10,11 +10,12 @@
 #include "animations.h"
 #include "filters.h"
 #include "derivative.h"
+#include "morphology.h"
 
 typedef enum views views;
 enum views
 {
-	menu, filters, derivation, opMath, contour, seg
+	menu, filters, derivation, morphology, contour, seg
 };
 
 class Controller : public Subject
@@ -83,5 +84,7 @@ public:
 
 	void Grad();
 
+	void Erosion();
+	void Dilatation();
 };
 

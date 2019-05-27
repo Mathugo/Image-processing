@@ -51,6 +51,9 @@
     <ClCompile Include="viewDerivative.cpp">
       <Filter>Views</Filter>
     </ClCompile>
+    <ClCompile Include="viewMorphology.cpp">
+      <Filter>Views</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="controller.h">
@@ -81,6 +84,9 @@
       <Filter>Views</Filter>
     </ClInclude>
     <ClInclude Include="viewDerivative.h">
+      <Filter>Views</Filter>
+    </ClInclude>
+    <ClInclude Include="viewMorphology.h">
       <Filter>Views</Filter>
     </ClInclude>
   </ItemGroup>
