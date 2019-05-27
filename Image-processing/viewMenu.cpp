@@ -20,19 +20,19 @@ void ViewMenu::notify()
 	{
 		display();
 	}
-	else if (controller.getScreen() == 7 && controller.getCurrentView() == menu)
+	else if (controller.getScreen() == 6 && controller.getCurrentView() == menu)
 	{
-		controller.printIMG("Your image");
+		controller.restoreIMG();
 		controller.setScreen(0);
 	}
-	else if (controller.getScreen() == 6 && controller.getCurrentView() == menu)
+	else if (controller.getScreen() == 7 && controller.getCurrentView() == menu)
 	{
 		controller.saveIMG();
 		controller.setScreen(0);
 	}
-	else if (controller.getScreen() == 5 && controller.getCurrentView() == menu)
+	else if (controller.getScreen() == 8 && controller.getCurrentView() == menu)
 	{
-		controller.restoreIMG();
+		controller.printIMG("Your image");
 		controller.setScreen(0);
 	}
 }
@@ -46,18 +46,19 @@ void ViewMenu::display() const
 	ViewTitle::display();
 	printY("\t1 - Filters");
 	printY("\t2 - Derivation");
-	printY("\t2 - Operations of mathematical morphology");
-	printY("\t3 - Contour Detection");
-	printY("\t4 - Segmentations of images");
-	printBB("\t5 - Restore your image");
-	printBB("\t6 - Save current image");
-	printBB("\t7 - Display your image");
+	printY("\t3 - Operations of mathematical morphology");
+	printY("\t4 - Contour Detection");
+	printY("\t5 - Segmentations of images");
+	printBB("\t6 - Restore your image");
+	printBB("\t7 - Save current image");
+	printBB("\t8 - Display your image");
 	printRB("\t9 - Exit");
 	std::cout << std::endl;
 	controller.setCurrentView(menu);
 	int res;
 	std::cin.clear();
 	std::cin >> res;
+	
 	controller.setScreen(res);
 }
 

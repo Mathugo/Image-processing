@@ -46,7 +46,10 @@
       <Filter>Views</Filter>
     </ClCompile>
     <ClCompile Include="viewFilters.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Views</Filter>
+    </ClCompile>
+    <ClCompile Include="viewDerivative.cpp">
+      <Filter>Views</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -75,7 +78,10 @@
       <Filter>Views</Filter>
     </ClInclude>
     <ClInclude Include="viewFilters.h">
-      <Filter>Header Files</Filter>
+      <Filter>Views</Filter>
+    </ClInclude>
+    <ClInclude Include="viewDerivative.h">
+      <Filter>Views</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

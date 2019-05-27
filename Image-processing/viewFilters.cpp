@@ -13,7 +13,7 @@ ViewFilters::ViewFilters(Controller& _controller) : ViewTitle("Filters"), contro
  */
 void ViewFilters::notify()
 {
-	if (controller.getScreen() == 1 && controller.getCurrentView() == menu || controller.getScreen() == 0 && controller.getCurrentView() == filters)
+	if (controller.getScreen() == 1 && controller.getCurrentView() == menu ||  controller.getScreen() == 0 && controller.getCurrentView() == filters)
 	{
 		display();
 	}

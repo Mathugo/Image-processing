@@ -113,7 +113,9 @@ void Controller::GaussianFilter()
 	currentImage = filter.GaussianFilter(currentImage);
 	printIMG("Your image with the gaussian filter");
 }
-
+/**
+* Start gradient on currentImage
+*/
 void Controller::Grad()
 {
 	Derivative derivate;

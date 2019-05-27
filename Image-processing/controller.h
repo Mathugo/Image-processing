@@ -14,7 +14,7 @@
 typedef enum views views;
 enum views
 {
-	menu, filters, merivation, opMath, contour, seg
+	menu, filters, derivation, opMath, contour, seg
 };
 
 class Controller : public Subject

@@ -3,6 +3,7 @@
 #include "viewMenu.h"
 #include "viewWelcome.h"
 #include "viewFilters.h"
+#include "viewDerivative.h"
 
 class Application  
 {
@@ -11,6 +12,7 @@ private:
 	ViewMenu viewMenu;
 	ViewWelcome viewWelcome;
 	ViewFilters viewFilters;
+	ViewDerivative viewDerivation;
 	
 public:
 	/**
