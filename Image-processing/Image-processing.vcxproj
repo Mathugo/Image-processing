@@ -132,6 +132,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="observer.cpp" />
     <ClCompile Include="subject.cpp" />
+    <ClCompile Include="viewContour.cpp" />
     <ClCompile Include="viewDerivative.cpp" />
     <ClCompile Include="viewFilters.cpp" />
     <ClCompile Include="viewMenu.cpp" />
@@ -145,6 +146,7 @@
     <ClInclude Include="controller.h" />
     <ClInclude Include="observer.h" />
     <ClInclude Include="subject.h" />
+    <ClInclude Include="viewContour.h" />
     <ClInclude Include="viewDerivative.h" />
     <ClInclude Include="viewFilters.h" />
     <ClInclude Include="viewMenu.h" />

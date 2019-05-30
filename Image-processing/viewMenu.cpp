@@ -35,6 +35,10 @@ void ViewMenu::notify()
 		controller.printIMG("Your image");
 		controller.setScreen(0);
 	}
+	else if (controller.getScreen() == 9 && controller.getCurrentView() == menu)
+	{
+		// 
+	}
 }
 
 /**
@@ -52,7 +56,8 @@ void ViewMenu::display() const
 	printBB("\t6 - Restore your image");
 	printBB("\t7 - Save current image");
 	printBB("\t8 - Display your image");
-	printRB("\t9 - Exit");
+	printBB("\t9 - Open an other image");
+	printRB("\t10 - Exit");
 	std::cout << std::endl;
 	controller.setCurrentView(menu);
 	int res;

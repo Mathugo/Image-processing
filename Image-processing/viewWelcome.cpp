@@ -24,13 +24,14 @@ void ViewWelcome::notify()
  */
 void ViewWelcome::display() const
 {
+
 	system("CLS");
 	ViewTitle::display();
 	printY("\t\t\t|--------------------------------------------------|");
 	printY("\t\t\t| Welcome to a simple Image-processing using opencv|");
 	printY("\t\t\t|--------------------------------------------------|\n\n");
 
-	printY("You must choose a file to read : ");
+	std::cout << KYEL << "You must choose a file to read : " << RST;
 
 	std::string filename;
 	std::cin >> filename;

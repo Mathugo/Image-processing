@@ -36,15 +36,15 @@ void ViewMorphology::notify()
 	}
 }
 /**
-	 * Displays the view and set current view to Filters
-	 */
+ * Displays the view and set current view to Filters
+*/
 void ViewMorphology::display() const
 {
 	system("CLS");
 	ViewTitle::display();
 	printY("\t1 - Dilatation");
 	printY("\t2 - Erosion");
-	printBB("\t3 - Menu");
+	printBB("\t3 - Return to menu");
 	controller.setCurrentView(morphology);
 
 	int res;

@@ -40,7 +40,7 @@ void ViewDerivative::display() const
 	system("CLS");
 	ViewTitle::display();
 	printY("\t1 - Calcul of the gradient");
-	printBB("\t2 - Menu");
+	printBB("\t2 - Return to menu");
 	controller.setCurrentView(derivation);
 
 	int res;

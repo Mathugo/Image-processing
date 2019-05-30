@@ -14,11 +14,13 @@
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)contour.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)derivative.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)filters.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)morphology.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)contour.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)derivative.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)filters.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)morphology.cpp" />

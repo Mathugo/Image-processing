@@ -15,7 +15,7 @@ Controller::Controller() : Subject(), currentScreen(-1), currentview(menu)
  */
 void Controller::setScreen(const int& idView)
 {
-	if (idView >= -1 && idView <= 9)
+	if (idView >= -1 && idView <= 10)
 		currentScreen = idView;
 	notify();
 }
@@ -132,4 +132,9 @@ void Controller::Erosion()
 void Controller::Dilatation()
 {
 	Morphology morphology;
+}
+
+void Controller::Canny()
+{
+	Contour contour;
 }
