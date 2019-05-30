@@ -12,6 +12,7 @@
 #include "derivative.h"
 #include "morphology.h"
 #include "contour.h"
+#include "segmentations.h"
 
 typedef enum views views;
 enum views
@@ -88,5 +89,7 @@ public:
 	void Erosion();
 	void Dilatation();
 	void Canny();
+	void Thresholding();
+	void Growth();
 };
 

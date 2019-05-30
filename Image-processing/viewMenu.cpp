@@ -37,7 +37,7 @@ void ViewMenu::notify()
 	}
 	else if (controller.getScreen() == 9 && controller.getCurrentView() == menu)
 	{
-		// 
+		controller.setScreen(-1);
 	}
 }
 

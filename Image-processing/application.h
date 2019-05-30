@@ -6,6 +6,7 @@
 #include "viewDerivative.h"
 #include "viewMorphology.h"
 #include "viewContour.h"
+#include "viewSegmentations.h"
 
 class Application  
 {
@@ -17,6 +18,7 @@ private:
 	ViewDerivative viewDerivation;
 	ViewMorphology viewMorphology;
 	ViewContour viewContour;
+	ViewSegmentations viewSegmentations;
 
 public:
 	/**

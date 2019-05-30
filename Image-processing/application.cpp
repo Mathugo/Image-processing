@@ -2,7 +2,7 @@
 
 
 
-Application::Application() : controller(), viewWelcome(controller), viewMenu(controller), viewFilters(controller), viewDerivation(controller), viewMorphology(controller), viewContour(controller)
+Application::Application() : controller(), viewWelcome(controller), viewMenu(controller), viewFilters(controller), viewDerivation(controller), viewMorphology(controller), viewContour(controller), viewSegmentations(controller)
 {
 }
 

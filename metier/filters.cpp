@@ -5,7 +5,7 @@ Filters::Filters()
 }
 
 
-cv::Mat Filters::MedianFilter(cv::Mat image)
+void Filters::MedianFilter(cv::Mat& image)
 {
 	printY("Please wait while the median filter is being applied on your image");
 	printY("This might take a while depending on the size of your image");
@@ -14,10 +14,10 @@ cv::Mat Filters::MedianFilter(cv::Mat image)
 	{
 		medianBlur(image, dst, i);
 	}
-	return dst;
+	image = dst;
 }
 
-cv::Mat Filters::GaussianFilter(cv::Mat image)
+void Filters::GaussianFilter(cv::Mat& image)
 {
 	printY("Please wait while the gaussian filter is being applied on your image");
 	printY("This might take a while depending on the size of your image");
@@ -25,5 +25,6 @@ cv::Mat Filters::GaussianFilter(cv::Mat image)
 	{
 		cv::GaussianBlur(image, dst, cv::Size(i, i), 0, 0);
 	}
-	return dst;
+	image = dst;
+
 }

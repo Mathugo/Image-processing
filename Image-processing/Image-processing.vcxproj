@@ -137,6 +137,7 @@
     <ClCompile Include="viewFilters.cpp" />
     <ClCompile Include="viewMenu.cpp" />
     <ClCompile Include="viewMorphology.cpp" />
+    <ClCompile Include="viewSegmentations.cpp" />
     <ClCompile Include="viewTitle.cpp" />
     <ClCompile Include="viewWelcome.cpp" />
   </ItemGroup>
@@ -151,6 +152,7 @@
     <ClInclude Include="viewFilters.h" />
     <ClInclude Include="viewMenu.h" />
     <ClInclude Include="viewMorphology.h" />
+    <ClInclude Include="viewSegmentations.h" />
     <ClInclude Include="viewTitle.h" />
     <ClInclude Include="viewWelcome.h" />
   </ItemGroup>

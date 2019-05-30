@@ -101,7 +101,7 @@ void Controller::restoreIMG()
 void Controller::MedianFilter()
 {
 	Filters filter;
-	currentImage = filter.MedianFilter(currentImage);
+	filter.MedianFilter(currentImage);
 	printIMG("Your image with the median filter");
 }
 /**
@@ -110,7 +110,7 @@ void Controller::MedianFilter()
 void Controller::GaussianFilter()
 {
 	Filters filter;
-	currentImage = filter.GaussianFilter(currentImage);
+	filter.GaussianFilter(currentImage);
 	printIMG("Your image with the gaussian filter");
 }
 /**
@@ -126,15 +126,28 @@ void Controller::Grad()
 void Controller::Erosion()
 {
 	Morphology morphology;
-
+	morphology.erosion();
 }
 
 void Controller::Dilatation()
 {
 	Morphology morphology;
+	morphology.dilatation();
 }
 
 void Controller::Canny()
 {
 	Contour contour;
+	contour.Canny();
+}
+
+void Controller::Thresholding()
+{
+	Segmentations seg;
+	seg.thresholding();
+}
+void Controller::Growth()
+{
+	Segmentations seg;
+	seg.thresholding();
 }

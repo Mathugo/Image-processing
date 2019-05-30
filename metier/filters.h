@@ -14,7 +14,7 @@ private:
 
 public:
 	Filters();
-	cv::Mat GaussianFilter(cv::Mat image);
-	cv::Mat MedianFilter(cv::Mat image);
+	void GaussianFilter(cv::Mat& image);
+	void MedianFilter(cv::Mat& image);
 };
 

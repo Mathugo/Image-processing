@@ -6,3 +6,11 @@ Morphology::Morphology()
 {
 }
 
+void Morphology::dilatation()
+{
+
+}
+void Morphology::erosion()
+{
+
+}
