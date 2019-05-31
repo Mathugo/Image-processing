@@ -179,8 +179,13 @@ std::string Controller::detectIMAGE()
 		while (getline(file, content))
 		{
 			int size = content.size();
-			if (content[size - 3] == 'j' && content[size - 2] == 'p' && content[size - 1] == 'g')
-				img = content + " " + img;
+			if (content.size() >= 4)
+			{
+				if (content[size - 3] == 'j' && content[size - 2] == 'p' && content[size - 1] == 'g' || content[size - 3] == 'p' && content[size - 2] == 'n' && content[size - 1] == 'g')
+				{
+					img = content + " " + img;
+				}
+			}
 		}
 		file.close();
 		cmd = "ERASE " + filename;
