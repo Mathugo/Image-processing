@@ -5,7 +5,7 @@
 Derivative::Derivative()
 {
 }
-cv::Mat Derivative::grad(cv::Mat image)
+void Derivative::grad(cv::Mat& image)
 {
 	
 	printY("Please wait while the gradients of your image are being applied");
@@ -26,7 +26,6 @@ cv::Mat Derivative::grad(cv::Mat image)
 	convertScaleAbs(grad_y, abs_grad_y);
 
 	addWeighted(abs_grad_x, 0.5, abs_grad_y, 0.5, 0, dst); // We add both gradients
-	
-	return src_gray;
-	
+		
+	image = dst;
 }

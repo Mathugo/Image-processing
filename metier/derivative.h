@@ -14,6 +14,6 @@ private:
 	int ddepth = CV_16S; //  The depth of the output image. We set it to CV_16S to avoid overflow.
 public:
 	Derivative();
-	cv::Mat grad(cv::Mat image);
+	void grad(cv::Mat& image);
 };
 
