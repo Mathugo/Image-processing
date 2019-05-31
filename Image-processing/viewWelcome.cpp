@@ -30,10 +30,19 @@ void ViewWelcome::display() const
 	printY("\t\t\t|--------------------------------------------------|");
 	printY("\t\t\t| Welcome to a simple Image-processing using opencv|");
 	printY("\t\t\t|--------------------------------------------------|\n\n");
-
+	displayIMAGE();
 	std::cout << KYEL << "You must choose a file to read : " << RST;
 
 	std::string filename;
 	std::cin >> filename;
 	controller.readIMG(filename);
+}
+
+void ViewWelcome::displayIMAGE() const
+{
+	std::cout << KYEL << "Program located in : " << RST;
+	system("CHDIR");
+	std::string images = controller.detectIMAGE();
+	printY("Files detected : "+images);
+
 }

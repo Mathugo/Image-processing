@@ -61,7 +61,7 @@
       <Filter>Views</Filter>
     </ClCompile>
     <ClCompile Include="viewBottom.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Views</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -105,7 +105,7 @@
       <Filter>Views</Filter>
     </ClInclude>
     <ClInclude Include="viewBottom.h">
-      <Filter>Header Files</Filter>
+      <Filter>Views</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

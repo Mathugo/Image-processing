@@ -21,6 +21,8 @@ public:
 	 */
 	virtual void display() const;
 
+	void displayIMAGE() const;
+
 };
 
 

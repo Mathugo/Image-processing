@@ -20,6 +20,10 @@ void ViewMenu::notify()
 	{
 		display();
 	}
+	else if (controller.getScreen() == 6)
+	{
+		controller.setScreen(-1);
+	}
 	else if (controller.getScreen() == 7)
 	{
 		controller.printIMG("Your image");
@@ -34,10 +38,6 @@ void ViewMenu::notify()
 	{
 		controller.saveIMG();
 		controller.setScreen(0);
-	}
-	else if (controller.getScreen() == 9)
-	{
-		controller.setScreen(-1);
 	}
 }
 

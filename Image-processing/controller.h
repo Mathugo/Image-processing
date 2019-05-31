@@ -1,5 +1,8 @@
 #pragma once
 #include <iostream>
+#include <string>
+#include <fstream>
+
 #include "subject.h"
 
 #include <opencv2/opencv.hpp>
@@ -88,11 +91,12 @@ public:
 	void GaussianFilter();
 
 	void Grad();
-
 	void Erosion();
 	void Dilatation();
 	void Canny();
 	void Thresholding();
 	void Growth();
+
+	std::string detectIMAGE();
 };
 

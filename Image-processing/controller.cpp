@@ -163,3 +163,32 @@ void Controller::Growth()
 	Segmentations seg;
 	seg.thresholding();
 }
+
+std::string Controller::detectIMAGE()
+{
+	std::string img = "";
+	const std::string filename = "allfiles";
+	std::string cmd = "dir /b >> " + filename;
+	system(cmd.c_str());
+
+	std::string content;
+
+	std::ifstream file(filename, std::ios::in);
+	if (file)
+	{
+		while (getline(file, content))
+		{
+			int size = content.size();
+			if (content[size - 3] == 'j' && content[size - 2] == 'p' && content[size - 1] == 'g')
+				img = content + " " + img;
+		}
+		file.close();
+		cmd = "ERASE " + filename;
+		system(cmd.c_str());
+		return img;
+	}
+	cmd = "ERASE " + filename;
+	system(cmd.c_str());
+	return "";
+
+}
