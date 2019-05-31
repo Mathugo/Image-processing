@@ -5,7 +5,7 @@
 * Constructor
 * @param _controlller: controller of the application
 */
-ViewContour::ViewContour(Controller& _controller) : controller(_controller), ViewTitle("Contour detection")
+ViewContour::ViewContour(Controller& _controller) : controller(_controller), ViewTitle("Contour detection"), ViewBottom(_controller)
 {
 	controller.addObserver(this);
 }
@@ -37,11 +37,8 @@ void ViewContour::display() const
 	system("CLS");
 	ViewTitle::display();
 	printY("\t1 - Canny");
-	printBB("\t2 - Return to menu");
+	printY("\t2 - Return to menu");
 	controller.setCurrentView(contour);
-
-	int res;
-	std::cin.clear();
-	std::cin >> res;
-	controller.setScreen(res);
+	ViewBottom::display();
+	controller.insert();
 }

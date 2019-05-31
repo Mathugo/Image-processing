@@ -3,7 +3,7 @@
 * Constructor
 * @param _controlller: controller of the application
 */
-ViewMorphology::ViewMorphology(Controller& _controller) : controller(_controller), ViewTitle("Morphology")
+ViewMorphology::ViewMorphology(Controller& _controller) : controller(_controller), ViewTitle("Morphology"), ViewBottom(_controller)
 {
 	controller.addObserver(this);
 }
@@ -44,11 +44,8 @@ void ViewMorphology::display() const
 	ViewTitle::display();
 	printY("\t1 - Dilatation");
 	printY("\t2 - Erosion");
-	printBB("\t3 - Return to menu");
+	printY("\t3 - Return to menu");
 	controller.setCurrentView(morphology);
-
-	int res;
-	std::cin.clear();
-	std::cin >> res;
-	controller.setScreen(res);
+	ViewBottom::display();
+	controller.insert();
 }

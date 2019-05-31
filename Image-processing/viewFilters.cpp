@@ -2,7 +2,7 @@
 
 
 
-ViewFilters::ViewFilters(Controller& _controller) : ViewTitle("Filters"), controller(_controller)
+ViewFilters::ViewFilters(Controller& _controller) : ViewTitle("Filters"), ViewBottom(_controller), controller(_controller)
 {
 	controller.addObserver(this);
 }
@@ -43,12 +43,10 @@ void ViewFilters::display() const
 	ViewTitle::display();
 	printY("\t1 - Median Filter");
 	printY("\t2 - Gaussian Filter");
-	printBB("\t3 - Return to menu");
+	printY("\t3 - Return to menu");
 
 	controller.setCurrentView(filters);
-	std::cout << std::endl;
-	int res;
-	std::cin.clear();
-	std::cin >> res;
-	controller.setScreen(res);
+
+	ViewBottom::display();
+	controller.insert();
 }

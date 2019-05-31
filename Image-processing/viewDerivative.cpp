@@ -6,7 +6,7 @@
 * Constructor
 * @param _controlller: controller of the application
 */
-ViewDerivative::ViewDerivative(Controller& _controller) : controller(_controller), ViewTitle("Derivative")
+ViewDerivative::ViewDerivative(Controller& _controller) : controller(_controller), ViewTitle("Derivative"), ViewBottom(_controller)
 {
 	controller.addObserver(this);
 }
@@ -40,14 +40,10 @@ void ViewDerivative::display() const
 	system("CLS");
 	ViewTitle::display();
 	printY("\t1 - Calcul of the gradient");
-	printBB("\t2 - Return to menu");
+	printY("\t2 - Return to menu");
 	controller.setCurrentView(derivation);
-
-	int res;
-	std::cin.clear();
-	std::cin >> res;
-	
-	controller.setScreen(res);
+	ViewBottom::display();
+	controller.insert();
 }
 
 

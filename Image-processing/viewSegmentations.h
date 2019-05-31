@@ -2,8 +2,9 @@
 #include "controller.h"
 #include "animations.h"
 #include "viewTitle.h"
+#include "viewBottom.h"
 
-class ViewSegmentations : public ViewTitle
+class ViewSegmentations : public ViewTitle, public ViewBottom
 {
 private:
 	// Controller of the application

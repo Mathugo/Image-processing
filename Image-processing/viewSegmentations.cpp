@@ -5,7 +5,7 @@
 * Constructor
 * @param _controlller: controller of the application
 */
-ViewSegmentations::ViewSegmentations(Controller& _controller) : controller(_controller), ViewTitle("Segmentations of Image")
+ViewSegmentations::ViewSegmentations(Controller& _controller) : controller(_controller), ViewTitle("Segmentations of Image"), ViewBottom(_controller)
 {
 	controller.addObserver(this);
 }
@@ -45,13 +45,10 @@ void ViewSegmentations::display() const
 	ViewTitle::display();
 	printY("\t1 - Thresholding operations");
 	printY("\t2 - Regional growth segmentation");
-	printBB("\t3 - Return to menu");
+	printY("\t3 - Return to menu");
 
-	std::cout << std::endl;
 	controller.setCurrentView(seg);
-	int res;
-	std::cin.clear();
-	std::cin >> res;
 
-	controller.setScreen(res);
+	ViewBottom::display();
+	controller.insert();
 }

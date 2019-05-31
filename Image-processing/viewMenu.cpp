@@ -20,22 +20,22 @@ void ViewMenu::notify()
 	{
 		display();
 	}
-	else if (controller.getScreen() == 7 && controller.getCurrentView() == menu)
+	else if (controller.getScreen() == 7)
 	{
 		controller.printIMG("Your image");
 		controller.setScreen(0);
 	}
-	else if (controller.getScreen() == 8 && controller.getCurrentView() == menu)
+	else if (controller.getScreen() == 8)
 	{
 		controller.restoreIMG();
 		controller.setScreen(0);
 	}
-	else if (controller.getScreen() == 9 && controller.getCurrentView() == menu)
+	else if (controller.getScreen() == 9)
 	{
 		controller.saveIMG();
 		controller.setScreen(0);
 	}
-	else if (controller.getScreen() == 9 && controller.getCurrentView() == menu)
+	else if (controller.getScreen() == 9)
 	{
 		controller.setScreen(-1);
 	}

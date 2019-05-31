@@ -1,8 +1,9 @@
 #pragma once
 #include"viewTitle.h"
 #include "controller.h"
+#include "viewBottom.h"
 
-class ViewMorphology : public ViewTitle
+class ViewMorphology : public ViewTitle, public ViewBottom
 {
 private:
 	Controller& controller;

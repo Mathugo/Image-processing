@@ -2,8 +2,9 @@
 #include "viewTitle.h"
 #include "controller.h"
 #include "animations.h"
+#include "viewBottom.h"
 
-class ViewContour : public ViewTitle
+class ViewContour : public ViewTitle, public ViewBottom
 {
 private:
 	/**

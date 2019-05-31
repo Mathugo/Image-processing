@@ -2,8 +2,9 @@
 #include "viewTitle.h"
 #include "controller.h"
 #include "animations.h"
+#include "viewBottom.h"
 
-class ViewFilters : public ViewTitle
+class ViewFilters : public ViewTitle, public ViewBottom
 {
 private:
 	// Controller of the application
