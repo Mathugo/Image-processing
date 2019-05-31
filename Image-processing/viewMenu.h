@@ -2,8 +2,9 @@
 #include "controller.h"
 #include <iostream>
 #include "viewTitle.h"
+#include "viewBottom.h"
 
-class ViewMenu : public ViewTitle
+class ViewMenu : public ViewTitle, public ViewBottom
 {
 private:
 	// Controller of the application

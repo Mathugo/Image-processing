@@ -6,7 +6,7 @@
 * @param _controlller: controller of the application
 */
 ViewMenu::ViewMenu(Controller& _controller)
-	: ViewTitle("Menu"), controller(_controller)
+	: ViewTitle("Menu"), ViewBottom(_controller), controller(_controller)
 {
 	controller.addObserver(this);
 }
@@ -46,7 +46,7 @@ void ViewMenu::notify()
  */
 void ViewMenu::display() const
 {
-	system("CLS");
+	clear();
 	ViewTitle::display();
 	printY("\t1 - Filters");
 	printY("\t2 - Derivation");
@@ -54,18 +54,9 @@ void ViewMenu::display() const
 	printY("\t4 - Contour Detection");
 	printY("\t5 - Segmentations of images");
 
-	// FAIRE BOTOM AVEC LES SETTINGS IMAGE VIEW
-	printY("\t6 - Open an other image");
-	printY("\t7 - Display your image");
-	printG("\t8 - Restore your image");
-	printG("\t9 - Save current image");
-	printRB("\t10 - Exit");
-	std::cout << std::endl;
+	ViewBottom::display();
 	controller.setCurrentView(menu);
-	int res;
-	std::cin.clear();
-	std::cin >> res;
-	
-	controller.setScreen(res);
+	controller.insert();
+
 }
 

@@ -53,7 +53,10 @@ public:
 	* Set the current view
 	*/
 	void setCurrentView(views _currentview);
-
+	/**
+	* Insert number to select view	
+	*/
+	void insert();
 	/**
 		* Read IMG from the user
 	*/

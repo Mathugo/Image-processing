@@ -37,6 +37,18 @@ views Controller::getCurrentView() const
 {
 	return currentview;
 }
+
+/**
+* Insert number to select view
+*/
+void Controller::insert()
+{
+	int res;
+	std::cin.clear();
+	std::cin >> res;
+	this->setScreen(res);
+}
+
 /**
 * Read IMG from the user
 * @param filename: name of the file to read
