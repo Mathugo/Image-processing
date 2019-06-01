@@ -95,7 +95,7 @@ void Controller::printIMG(const std::string windowName) const
 void Controller::saveIMG() const
 {
 	std::string filename;
-	printY("Please enter a name for your image : ");
+	std::cout << KYEL << "Please enter a name for your image : " << RST;
 	std::cin >> filename;
 	imwrite(filename, currentImage);
 }
@@ -163,7 +163,9 @@ void Controller::Growth()
 	Segmentations seg;
 	seg.thresholding();
 }
-
+/**
+* Detect images in the current folder (jpg and png)
+*/
 std::string Controller::detectIMAGE()
 {
 	std::string img = "";
@@ -181,7 +183,10 @@ std::string Controller::detectIMAGE()
 			int size = content.size();
 			if (content.size() >= 4)
 			{
-				if (content[size - 3] == 'j' && content[size - 2] == 'p' && content[size - 1] == 'g' || content[size - 3] == 'p' && content[size - 2] == 'n' && content[size - 1] == 'g')
+				bool test_jpg = content[size - 3] == 'j' && content[size - 2] == 'p' && content[size - 1] == 'g' || content[size - 3] == 'J' && content[size - 2] == 'P' && content[size - 1] == 'G';
+				bool test_png = content[size - 3] == 'p' && content[size - 2] == 'n' && content[size - 1] == 'g' || content[size - 3] == 'P' && content[size - 2] == 'N' && content[size - 1] == 'G';
+
+				if (test_jpg || test_png)
 				{
 					img = content + " " + img;
 				}

@@ -42,7 +42,7 @@ public:
 	 * @param value : id of the new screen to display
 	 */
 	void setScreen(const int& idView);
-
+		
 	/**
 	 * Returns the id of the current displayed screen
 	 */
@@ -97,6 +97,9 @@ public:
 	void Thresholding();
 	void Growth();
 
+	/**
+	* Detect image in the current folder (jpg and png)
+	*/
 	std::string detectIMAGE();
 };
 

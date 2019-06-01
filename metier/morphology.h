@@ -1,9 +1,18 @@
 #pragma once
+#include "..\Image-processing\animations.h"
+#include <opencv2/opencv.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/highgui.hpp>
+
 class Morphology
 {
+private:
+	cv::Mat dst;
 public:
 	Morphology();
-	void dilatation();
-	void erosion();
+	void dilatation(cv::Mat& image);
+	void erosion(cv::Mat& image);
+
 };
 

@@ -6,11 +6,15 @@ Morphology::Morphology()
 {
 }
 
-void Morphology::dilatation()
+void Morphology::dilatation(cv::Mat& image)
 {
 
 }
-void Morphology::erosion()
-{
 
+
+void Morphology::erosion(cv::Mat& image)
+{
+	
+
+	
 }
