@@ -2,13 +2,28 @@
 
 
 
-Morphology::Morphology()
+Morphology::Morphology(cv::Mat& _image) : image(_image)
 {
 }
 
-void Morphology::dilatation(cv::Mat& image)
+void Morphology::dilatation()
 {
+	enter(dilation_size, dilation_type);
 
+	if (dilation_elem == 0) { dilation_type = cv::MORPH_RECT; }
+	else if (dilation_elem == 1) { dilation_type = cv::MORPH_CROSS; }
+	else if (dilation_elem == 2) { dilation_type = cv::MORPH_ELLIPSE; }
+
+	cv::Mat element = cv::getStructuringElement(dilation_type,
+	cv::Size(2 * dilation_size + 1, 2 * dilation_size + 1),
+	cv::Point(dilation_size, dilation_size));
+
+	/// Apply the dilation operation
+	printY("Please wait while dilatation is being applied");
+	printY("This might take a while depending on the size of your image");
+
+	dilate(image, dst, element);
+	image = dst;
 }
 
 void Morphology::enter(int& erosion_size, int& erosion_type)
@@ -18,7 +33,7 @@ void Morphology::enter(int& erosion_size, int& erosion_type)
 	// Element:\n 0: Rect \n 1: Cross \n 2: Ellipse"
 	system("cls");
 
-	printY("\nPlease enter the type of erosion you want");
+	printY("\nPlease enter the type you want");
 	printY("0: Rect");
 	printY("1: Cross");
 	printY("2: Ellipse\n");
@@ -43,7 +58,7 @@ void Morphology::enter(int& erosion_size, int& erosion_type)
 
 	system("cls");
 
-	printY("\nPlease enter the level of erosion you want");
+	printY("\nPlease enter the level of the filter you want");
 	printY("1 - LOW");
 	printY("2 - MEDIUM");
 	printY("3 - HIGH\n");
@@ -69,16 +84,8 @@ void Morphology::enter(int& erosion_size, int& erosion_type)
 
 }
 
-void Morphology::erosion(cv::Mat& image)
+void Morphology::erosion()
 {
-	cv::Mat erosion_dst, dilation_dst;
-	
-	int erosion_type;
-	int erosion_size = 0;
-	int const max_elem = 2;
-	int const max_kernel_size = 21;
-	int erosion_elem = 0;
-
 	enter(erosion_size, erosion_type);
 	
 	if (erosion_elem == 0) { erosion_type = cv::MORPH_RECT; }
@@ -92,8 +99,8 @@ void Morphology::erosion(cv::Mat& image)
 	/// Apply the erosion operation
 	printY("Please wait while erosion is being applied");
 	printY("This might take a while depending on the size of your image");
-	erode(image, erosion_dst, element);
+	erode(image, dst, element);
 
-	image = erosion_dst;
+	image = dst;
 	
 }
