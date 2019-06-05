@@ -1,5 +1,5 @@
 #pragma once
-#include <string.h>>
+#include <string.h>
 #include "..\Image-processing\animations.h"
 #include <opencv2/opencv.hpp>
 #include <opencv2/imgproc.hpp>

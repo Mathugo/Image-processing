@@ -40,9 +40,6 @@ void ViewWelcome::display() const
 
 void ViewWelcome::displayIMAGE() const
 {
-	std::cout << KYEL << "Program located in : " << RST;
-	system("CHDIR");
 	std::string images = controller.detectIMAGE();
 	printY("Files detected : "+images);
-
 }

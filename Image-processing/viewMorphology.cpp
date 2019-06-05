@@ -21,12 +21,12 @@ void ViewMorphology::notify()
 	}
 	else if (controller.getScreen() == 1 && controller.getCurrentView() == morphology)
 	{
-		controller.Erosion();
+		controller.Dilatation();
 		controller.setScreen(0);
 	}
 	else if (controller.getScreen() == 2 && controller.getCurrentView() == morphology)
 	{
-		controller.Dilatation();
+		controller.Erosion();
 		controller.setScreen(0);
 	}
 	else if (controller.getScreen() == 3 && controller.getCurrentView() == morphology)

@@ -9,10 +9,11 @@ class Morphology
 {
 private:
 	cv::Mat dst;
+	
 public:
 	Morphology();
 	void dilatation(cv::Mat& image);
 	void erosion(cv::Mat& image);
+	void enter(int& erosion_size);
 
 };
-
