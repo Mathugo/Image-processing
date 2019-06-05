@@ -146,13 +146,14 @@ void Controller::Dilatation()
 {
 	Morphology morphology;
 	morphology.dilatation(currentImage);
-	printIMG("Your image with dilatation")
+	printIMG("Your image with dilatation");
 }
 
 void Controller::Canny()
 {
 	Contour contour;
-	contour.Canny();
+	contour.Canny(currentImage);
+	printIMG("The contours");
 }
 
 void Controller::Thresholding()

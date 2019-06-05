@@ -13,6 +13,7 @@ void Derivative::grad(cv::Mat& image)
 	cv::Mat grad_x, grad_y;
 	cv::Mat abs_grad_x, abs_grad_y;
 	cv::Mat src_gray;
+
 	cv::cvtColor(image, src_gray, cv::COLOR_BGR2GRAY); // convert to grayscale to see the gradients
 	
 	image = src_gray;
