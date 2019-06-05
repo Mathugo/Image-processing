@@ -137,15 +137,16 @@ void Controller::Grad()
 
 void Controller::Erosion()
 {
-	Morphology morphology(currentImage);
-	morphology.erosion();
+	Morphology morphology;
+	morphology.erosion(currentImage);
 	printIMG("Your image with erosion");
 }
 
 void Controller::Dilatation()
 {
-	Morphology morphology(currentImage);
-	morphology.dilatation();
+	Morphology morphology;
+	morphology.dilatation(currentImage);
+	printIMG("Your image with dilatation")
 }
 
 void Controller::Canny()

@@ -2,11 +2,11 @@
 
 
 
-Morphology::Morphology(cv::Mat& _image) : image(_image)
+Morphology::Morphology()
 {
 }
 
-void Morphology::dilatation()
+void Morphology::dilatation(cv::Mat& image)
 {
 	enter(dilation_size, dilation_type);
 
@@ -84,7 +84,7 @@ void Morphology::enter(int& erosion_size, int& erosion_type)
 
 }
 
-void Morphology::erosion()
+void Morphology::erosion(cv::Mat& image)
 {
 	enter(erosion_size, erosion_type);
 	
