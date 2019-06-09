@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 /Image-processing/image.JPG
+/Image-processing/immeuble.jpg

@@ -21,6 +21,7 @@ void ViewContour::notify()
 	else if (controller.getScreen() == 1 && controller.getCurrentView() == contour)
 	{
 		controller.Canny();
+		controller.setScreen(0);
 	}
 	else if (controller.getScreen() == 2 && controller.getCurrentView() == contour)
 	{

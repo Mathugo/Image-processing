@@ -24,10 +24,12 @@ void ViewSegmentations::notify()
 	else if (controller.getScreen() == 1 && controller.getCurrentView() == seg)
 	{
 		controller.Thresholding();
+		controller.setScreen(0);
 	}
 	else if (controller.getScreen() == 2 && controller.getCurrentView() == seg)
 	{
 		controller.Growth();
+		controller.setScreen(0);
 	}
 	else if (controller.getScreen() == 3 && controller.getCurrentView() == seg)
 	{

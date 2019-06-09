@@ -52,7 +52,7 @@ void Morphology::enter(int& erosion_size, int& erosion_type)
 	}
 	else
 	{
-		printRB("Bad type entered, defaut is 0");
+		printRB("Bad type entered, default is 0");
 		erosion_type = 0;
 	}
 

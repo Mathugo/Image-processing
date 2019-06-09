@@ -159,12 +159,13 @@ void Controller::Canny()
 void Controller::Thresholding()
 {
 	Segmentations seg;
-	seg.thresholding();
+	seg.thresholding(currentImage);
+	printIMG("Your image with thresholding");
 }
 void Controller::Growth()
 {
 	Segmentations seg;
-	seg.thresholding();
+	seg.growth();
 }
 /**
 * Detect images in the current folder (jpg and png)

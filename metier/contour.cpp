@@ -8,36 +8,21 @@ Contour::Contour()
 
 void Contour::Canny(cv::Mat& image)
 {
-	
-	//int thresh = 100;
-	//cv::RNG rng(12345);
+	cv::Mat src_gray;
+	cv::Mat dst, detected_edges;
+	int cannyThreshold = 100; // intensity of the detector
 
-	//cv::Mat src_gray;
+	const int ratio = 3;
+	const int kernel_size = 3;
 
-	//cv::cvtColor(image, src_gray, cv::COLOR_BGR2GRAY); // convert to gray scale
+	dst.create(image.size(), image.type());
+	cv::cvtColor(image, src_gray, cv::COLOR_BGR2GRAY); // convert to gray to see edges
 
-	//cv::blur(src_gray, src_gray, cv::Size(3, 3));
-	/*
-	cv::Mat canny_output;
-	std::vector<std::vector<cv::Point> > contours;
-	std::vector<cv::Vec4i> hierarchy;
+	cv::blur(src_gray, detected_edges, cv::Size(3, 3)); // Reduction of noise
 
-	/// Detect edges using canny
-	cv::Canny(src_gray, canny_output, thresh, thresh * 2, 3);
-	/// Find contours
-	findContours(canny_output, contours, hierarchy, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE, cv::Point(0, 0));
+	cv::Canny(detected_edges, detected_edges, cannyThreshold, cannyThreshold*ratio, kernel_size);
+	dst = cv::Scalar::all(0);
+	image.copyTo(dst, detected_edges);
 
-	/// Draw contours
-	cv::Mat drawing = cv::Mat::zeros(canny_output.size(), CV_8UC3);
-
-	for (int i = 0; i < contours.size(); i++)
-	{
-		cv::Scalar color = cv::Scalar(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));
-		drawContours(drawing, contours, i, color, 2, 8, hierarchy, 0, cv::Point());
-	}
-	*/
-
-//	image = canny_output;
-	//image = src_gray;
-
+	image = dst;
 }
