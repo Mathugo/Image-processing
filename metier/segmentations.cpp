@@ -45,6 +45,7 @@ void Segmentations::enter()
 
 
 }
+
 void Segmentations::thresholding(cv::Mat& image)
 {
 	cv::Mat src_gray;
@@ -54,6 +55,7 @@ void Segmentations::thresholding(cv::Mat& image)
 	threshold(src_gray, dst, threshold_value, max_BINARY_value, threshold_type);
 	image = dst;
 }
+
 void Segmentations::growth()
 {
 

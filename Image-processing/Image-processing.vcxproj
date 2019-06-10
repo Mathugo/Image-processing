@@ -126,7 +126,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="animations.cpp" />
     <ClCompile Include="application.cpp" />
     <ClCompile Include="controller.cpp" />
     <ClCompile Include="main.cpp" />
@@ -143,7 +142,6 @@
     <ClCompile Include="viewWelcome.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="animations.h" />
     <ClInclude Include="application.h" />
     <ClInclude Include="controller.h" />
     <ClInclude Include="observer.h" />

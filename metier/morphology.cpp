@@ -26,7 +26,7 @@ void Morphology::dilatation(cv::Mat& image)
 	image = dst;
 }
 
-void Morphology::enter(int& erosion_size, int& erosion_type)
+void Morphology::enter(int& size, int& type)
 {
 	int enter;
 
@@ -41,19 +41,14 @@ void Morphology::enter(int& erosion_size, int& erosion_type)
 	std::cin.clear();
 	std::cin >> enter;
 
-	if (1 <= enter && enter <= 3)
+	if (0 <= enter && enter <= 2)
 	{
-		if (enter == 1)
-			erosion_type = 0;
-		else if (enter == 2)
-			erosion_type = 1;
-		else if (enter == 3)
-			erosion_type = 2;
+		type = enter;
 	}
 	else
 	{
 		printRB("Bad type entered, default is 0");
-		erosion_type = 0;
+		type = 0;
 	}
 
 	system("cls");
@@ -68,16 +63,16 @@ void Morphology::enter(int& erosion_size, int& erosion_type)
 	if (1 <= enter && enter <= 3)
 	{
 		if (enter == 1)
-			erosion_size = 25;
+			size = 25;
 		else if (enter == 2)
-			erosion_size = 50;
+			size = 50;
 		else if (enter == 3)
-			erosion_size = 75;
+			size = 75;
 	}
 	else
 	{
 		printRB("Bad level entered, defaut is MEDIUM");
-		erosion_size = 50;
+		size = 50;
 	}
 
 	system("cls");

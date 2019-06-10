@@ -2,7 +2,7 @@
 #include "animations.h"
 #include "controller.h"
 
-class ViewBottom
+class ViewBottom 
 {
 private:
 	Controller& controller;

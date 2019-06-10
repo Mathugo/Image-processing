@@ -9,11 +9,8 @@ class Morphology
 {
 private:
 	cv::Mat dst;
-
 	int erosion_type;
 	int erosion_size = 0;
-	int const max_elem = 2;
-	int const max_kernel_size = 21;
 	int erosion_elem = 0;
 
 	int dilation_type;
@@ -24,6 +21,6 @@ public:
 	Morphology();
 	void dilatation(cv::Mat& image);
 	void erosion(cv::Mat& image);
-	void enter(int& erosion_size, int& erosion_type);
+	void enter(int& size, int& type);
 
 };
