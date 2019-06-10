@@ -15,7 +15,7 @@ This project is made with the MVC design pattern, finally they will be different
    * application of a contour detector "Canny"
  * Segmentations of images:
    * thresholding operations
-   * regional growth segmentation
+   * region growing segmentation
   
 ## Getting Started
 
