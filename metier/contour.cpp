@@ -8,6 +8,9 @@ Contour::Contour()
 
 void Contour::Canny(cv::Mat& image)
 {
+	printY("Please wait while the contour detector is being applied on your image");
+	printY("This might take a while depending on the size of your image");
+
 	cv::Mat src_gray;
 	cv::Mat dst, detected_edges;
 	int cannyThreshold = 100; // intensity of the detector

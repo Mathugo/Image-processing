@@ -7,12 +7,13 @@
 class ViewContour : public ViewTitle, public ViewBottom
 {
 private:
+
+	Controller& controller;
+public:
 	/**
 * Constructor
 * @param _controlller: controller of the application
 */
-	Controller& controller;
-public:
 	ViewContour(Controller& _controller);
 
 	/**

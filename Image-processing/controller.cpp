@@ -32,7 +32,9 @@ void Controller::setCurrentView(views _currentview)
 {
 	currentview = _currentview;
 }
-
+/**
+* Get the currentView
+*/
 views Controller::getCurrentView() const
 {
 	return currentview;

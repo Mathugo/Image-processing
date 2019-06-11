@@ -41,5 +41,5 @@ void ViewWelcome::display() const
 void ViewWelcome::displayIMAGE() const
 {
 	std::string images = controller.detectIMAGE();
-	printY("Files detected : "+images);
+	std::cout << KYEL << "Files detected in your current directory : " << RST << images << std::endl;
 }
