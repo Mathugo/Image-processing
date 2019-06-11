@@ -393,30 +393,11 @@
 									"model": {
 										"$ref": "AAAAAAFrDsXlGYz1jZc="
 									},
-									"subViews": [
-										{
-											"_type": "UMLAttributeView",
-											"_id": "AAAAAAFrDsYI0o0iqzg=",
-											"_parent": {
-												"$ref": "AAAAAAFrDsXlG4z9T2U="
-											},
-											"model": {
-												"$ref": "AAAAAAFrDsYIXI0ffHc="
-											},
-											"font": "Arial;13;0",
-											"left": 581,
-											"top": 286,
-											"width": 239,
-											"height": 13,
-											"text": "-controller: Controller&",
-											"horizontalAlignment": 0
-										}
-									],
 									"font": "Arial;13;0",
 									"left": 576,
 									"top": 281,
 									"width": 249,
-									"height": 23
+									"height": 10
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -439,7 +420,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 581,
-											"top": 309,
+											"top": 296,
 											"width": 239,
 											"height": 13,
 											"text": "+ViewBottom(_controller: Controller&)",
@@ -456,7 +437,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 581,
-											"top": 324,
+											"top": 311,
 											"width": 239,
 											"height": 13,
 											"text": "+const display()",
@@ -465,7 +446,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 576,
-									"top": 304,
+									"top": 291,
 									"width": 249,
 									"height": 38
 								},
@@ -4270,18 +4251,6 @@
 										}
 									},
 									"visibility": "private"
-								}
-							],
-							"attributes": [
-								{
-									"_type": "UMLAttribute",
-									"_id": "AAAAAAFrDsYIXI0ffHc=",
-									"_parent": {
-										"$ref": "AAAAAAFrDsXlGYz1jZc="
-									},
-									"name": "controller",
-									"visibility": "private",
-									"type": "Controller&"
 								}
 							],
 							"operations": [

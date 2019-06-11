@@ -81,15 +81,10 @@ public:
 	void restoreIMG();
 
 	/**
-	* MedianFiltrer using current image
+	* All operation to the current image
 	*/
 	void MedianFilter();
-
-	/**
-	* GaussianFilter using current image
-	*/
 	void GaussianFilter();
-
 	void Grad();
 	void Erosion();
 	void Dilatation();

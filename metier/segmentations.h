@@ -4,6 +4,7 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/imgcodecs.hpp>
 #include <opencv2/highgui.hpp>
+#include <vector>
 
 class Segmentations
 {
@@ -16,6 +17,6 @@ public:
 	Segmentations();
 	void thresholding(cv::Mat& image);
 	void enter();
-	void growth();
+	void growth(cv::Mat& image);
 };
 

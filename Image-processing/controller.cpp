@@ -165,7 +165,8 @@ void Controller::Thresholding()
 void Controller::Growth()
 {
 	Segmentations seg;
-	seg.growth();
+	seg.growth(currentImage);
+	printIMG("Your image with region growing segmentation");
 }
 /**
 * Detect images in the current folder (jpg and png)
