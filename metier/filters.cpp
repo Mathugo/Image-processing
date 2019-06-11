@@ -6,8 +6,6 @@ Filters::Filters()
 
 void Filters::MedianFilter(cv::Mat& image)
 {
-	std::mutex locker;
-
 	printY("Please wait while the median filter is being applied on your image");
 	printY("This might take a while depending on the size of your image");
 	// MAX_KERNEL_LENGTH -> Number of pixels around to median, must be small

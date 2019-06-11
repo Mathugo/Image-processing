@@ -149,8 +149,6 @@ void Segmentations::growth(cv::Mat& image)
 	cv::Mat mark;
 	markers.convertTo(mark, CV_8U);
 	bitwise_not(mark, mark);
-	//    imshow("Markers_v2", mark); // uncomment this if you want to see how the mark
-	// image looks like at that point
 	// Generate random colors
 	std::vector<cv::Vec3b> colors;
 	for (size_t i = 0; i < contours.size(); i++)
